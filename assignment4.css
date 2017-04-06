@@ -96,3 +96,11 @@ input:-moz-placeholder {
   line-height: 45px;
   text-align: center;
 }
+
+#flexsearch-display li {
+  list-style-type: none;
+}
+#flexsearch-display a {
+  color: black;
+  text-decoration: none;
+}
