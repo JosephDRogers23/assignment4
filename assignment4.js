@@ -52,12 +52,13 @@ function find(text){
               if(found_term.indexOf(search_term)!==(-1))
               {
                 console.log("MADE IT");
-                var url = "\'http://google.com/search?btnI=1&q=\\\'" + info + "\'";
+                var url = "\'http://google.com/#q=" + info + "\'";
                 url = url.replace(" ", "%20")
                 console.log(url);
-                var term = "<li><a href=" + url + " target='_blank'>" + info + "</a></li";
+                var term = "<li></li>";
                 console.log(term);
                 $("#flexsearch-display").append(term);
+                $("#flexsearch-display").find("li:last").append("<a href=" + url + " target='_blank'>" + info)
               }
             }
             })
