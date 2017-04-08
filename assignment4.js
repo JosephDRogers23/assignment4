@@ -40,9 +40,9 @@ function find(text){
     type: 'GET',
     dataType: 'JSON',
     url: 'http://www.mattbowytz.com/simple_api.json?data=all',
-    success: function(data) {
+    success: function(api) {
         var search_term = text.toLowerCase();
-        $.each(data.data, function(index, value) {
+        $.each(api.data, function(index, value) {
           $.each(value, function(i, info){
           //  console.log(info);
             if(info.length >= search_term.length)
